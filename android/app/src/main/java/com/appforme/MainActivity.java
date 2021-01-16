@@ -1,6 +1,12 @@
 package com.appforme;
+// react-native-splash-screen >= 0.3.1
+import android.os.Bundle;
 
+// react-native-splash-screen >= 0.3.1
 import com.facebook.react.ReactActivity;
+
+import org.devio.rn.splashscreen.SplashScreen;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +17,11 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "AppForMe";
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    SplashScreen.show(this);  // here
+    super.onCreate(savedInstanceState);
   }
 }
